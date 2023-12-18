@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# ARCO Coding exercise
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+CSV Dashboard application - Built using React JS
 
-## Available Scripts
+App consists of 4 components- Navbar, Home, UploadCSV, SearchCSV.
 
-In the project directory, you can run:
+### Home
+Basic intro home component which is displayed by default.
 
-### `npm start`
+### Upload CSV
+The Upload CSV component which was created so that instead of hardcoding and saving this csv, the app's functionalities can be tested with any csv of your choosing.\
+If a CSV has been previously uploaded it shows below in a tabular form.\
+If no cs has been uploaded (not present in app state) then no table is displayed.\
+To use the functionality- upload csv once, navigate to the Searchpage and try filtering by the parameters you wish to use and then you can try the same with another csv.\
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Search Page
+This component takes the uploaded csv as a prop.\
+It first shows you 1 dropdown which is the column you want to filter by.\
+On choosing that, it immediately populates an array for the options for the second dropdown to be chosen.\
+You can pick the unique value from the second dropdown that you wish to filter the table by.\
+eg. type -> accident.\
+Then the filtered table is displayed.\
+This has been designed and deployed in keeping with SOLID principles so that the app is as generic as possible wrt the csv used etc. Designed to be as modular as possible.\
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Limitations
 
-### `npm test`
+Only search by one column at a time, not several filters at once.\
+Unfortunately due to time constraints no persistence is implemented so the csv stored in state dissapears if you forcibly reload the application.\
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Deployed
 
-### `npm run build`
+Netlify is a free tool which deployed from my git link which I have also previously used to submit class assignments.\
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Assesment time taken 90 mins, can be verified by the git commit timings.\
+Thank you! .\
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Netlify link: https://dreamy-marzipan-7e882d.netlify.app/
