@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import UploadCSV from './components/UploadCSV';
-import SortData from './components/SortData';
 import SearchData from './components/SearchData';
 import Intro from './components/Intro';
 
@@ -20,11 +19,7 @@ function App() {
       <Routes>
       <Route
           path="/upload"
-          element={<UploadCSV onUpload={handleUpload} />}
-        />
-        <Route
-          path="/sort"
-          element={<SortData csvData={csvData} />}
+          element={<UploadCSV onUpload={handleUpload} csvDataSent={csvData}/>}
         />
         <Route
           path="/search"

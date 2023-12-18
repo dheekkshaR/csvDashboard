@@ -33,11 +33,6 @@ function Navbar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/sort">
-                Sort Data
-              </Link>
-            </li>
-            <li className="nav-item">
               <Link className="nav-link" to="/search">
                 Search Data
               </Link>
